@@ -1,11 +1,10 @@
 import customtkinter
+from classes.formatters.mappings.FormatterMapping import FormatterMapping
 
 class App(customtkinter.CTk):
 
     SETTINGS_APP_TITLE = 'AI App'
     SETTINGS_GEOMETRY_RESOLUTION = '800x600'
-
-    DROPDOWN_FORMAT_TYPE_OPTIONS = ['W++ Format', 'Boostyle', 'Bracked List']
 
     def __init__(self):
         super().__init__()
@@ -85,7 +84,7 @@ class App(customtkinter.CTk):
         self.sidebar_label_dropdown_type.pack(side='top', pady=10, padx=20)
 
     def _render_sidebar_dropdown(self):
-        self.sidebar_dropdown_format = customtkinter.CTkComboBox(self.sidebar_frame, values=self.DROPDOWN_FORMAT_TYPE_OPTIONS)
+        self.sidebar_dropdown_format = customtkinter.CTkComboBox(self.sidebar_frame, values=FormatterMapping.get_format_types())
         self.sidebar_dropdown_format.pack(side="top", pady=0, padx=0)
 
     # ============================= Sidebar - End =============================================#
