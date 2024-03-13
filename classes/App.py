@@ -67,6 +67,10 @@ class App(customtkinter.CTk):
         # Button "Generate"
         self._render_sidebar_generate_button()
 
+        # Input "Charachter name"
+        self._render_sidebar_label_charachter_name()
+        self._render_sidebar_input_charachter_name()
+
         # Dropdown "Format Type"
         self._render_sidebar_label_to_dropdown_type()
         self._render_sidebar_dropdown()
@@ -81,10 +85,18 @@ class App(customtkinter.CTk):
 
     def _render_sidebar_label_to_dropdown_type(self, text = "Select style text format"):
         self.sidebar_label_dropdown_type = customtkinter.CTkLabel(self.sidebar_frame, text=text)
-        self.sidebar_label_dropdown_type.pack(side='top', pady=10, padx=20)
+        self.sidebar_label_dropdown_type.pack(side='top')
 
     def _render_sidebar_dropdown(self):
         self.sidebar_dropdown_format = customtkinter.CTkComboBox(self.sidebar_frame, values=FormatterMapping.get_format_types())
         self.sidebar_dropdown_format.pack(side="top", pady=0, padx=0)
+
+    def _render_sidebar_label_charachter_name(self, text = "Input charachter name"):
+        self.sidebar_label_charachter_name = customtkinter.CTkLabel(self.sidebar_frame, text=text)
+        self.sidebar_label_charachter_name.pack(side='top')
+
+    def _render_sidebar_input_charachter_name(self, placeholder = "Charachter name"):
+        self.sidebar_input_charachter_name = customtkinter.CTkEntry(self.sidebar_frame, placeholder_text=placeholder)
+        self.sidebar_input_charachter_name.pack(side='top')
 
     # ============================= Sidebar - End =============================================#
