@@ -45,7 +45,7 @@ To use the application, follow these steps:
 ## Example
 Input:
 ```
-Nickname: Anonym
+Nickname: Merlin Wizard
 Age:  25
 Features: famous wizard, skilled + powerful, 
 ```
