@@ -6,9 +6,9 @@ class WppFormatter(BaseFormatter):
         processed_lines = [self._process_line(line) for line in charachter_name_description.splitlines() if line.strip()]
         formatter_text = '[\n{\n' + '\n'.join(processed_lines) + '\n}]'
         return formatter_text
-
+    
     def _process_line(self, line):
         key, value = line.split(':')
         values_joined = '+'.join([f'"{v.strip()}"' for v in value.split(',')])
         processed_line = f"{key}({values_joined})"
-        return processed_line
+        return self.normalize_line(processed_line)

@@ -11,4 +11,4 @@ class BoostyleFormatter(BaseFormatter):
         key, value = line.split(':')
         values_joined = '+'.join([f'"{v.strip()}"' for v in value.split(',')])
         processed_line = f"{values_joined}"
-        return processed_line
+        return self.normalize_line(processed_line)
