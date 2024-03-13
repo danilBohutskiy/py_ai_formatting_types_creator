@@ -1,3 +1,6 @@
 class BasicTemplate:
+
+    TEMPLATE_BODY = []
+
     def get(self):
-        raise NotImplementedError("The method must be implemented in subclasses!")
+        return '\n'.join(self.TEMPLATE_BODY) 
