@@ -1,6 +1,6 @@
-from ..WppFormatter import WppFormatter
-from ..BoostyleFormatter import BoostyleFormatter
-from ..BracketedListFormatter import BracketedListFormatter
+from ..formatters.WppFormatter import WppFormatter
+from ..formatters.BoostyleFormatter import BoostyleFormatter
+from ..formatters.BracketedListFormatter import BracketedListFormatter
 
 class FormatterMapping:
     FORMATTER_MAPPING = {

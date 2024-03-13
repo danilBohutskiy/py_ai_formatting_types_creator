@@ -1,4 +1,4 @@
-from ..formatters.mappings.FormatterMapping import FormatterMapping
+from ..mappings.FormatterMapping import FormatterMapping
 
 class FormatterFactory:
     def create(format_type):
