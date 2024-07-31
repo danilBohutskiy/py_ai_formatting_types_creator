@@ -1,6 +1,14 @@
 import re
 
 class BaseFormatter:
+
+    def split_line(self, line, delimiter=':'):
+        try:
+            key, value = line.split(delimiter, 1)
+            return key, value
+        except ValueError:
+            return None, None
+
     def normalize_line(self, text):
         return re.sub(r'\s+', ' ', text).strip()
 

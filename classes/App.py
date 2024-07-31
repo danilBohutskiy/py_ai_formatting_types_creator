@@ -123,7 +123,7 @@ class App(customtkinter.CTk):
     def button_generate_output(self):
         character_name = self.sidebar_input_character_name.get()
         if (character_name == ''):
-            character_name = self.DEFAULT_character_NAME
+            character_name = self.DEFAULT_CHARACTER_NAME
         character_description = self.main_frame_textbox_input.get(0.0, 'end')
         format_type = self.sidebar_dropdown_format.get()
 
